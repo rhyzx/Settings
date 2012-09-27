@@ -1,10 +1,13 @@
+set rtp=~/.vim,$VIMRUNTIME
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+
 set nocp
 
 " Tab related
-set ts=4
-set sw=4
+set ts=4 sw=4 et
 set smarttab
-set et
 set ambiwidth=double
 
 " Format related
@@ -28,23 +31,19 @@ set selection=inclusive
 
 " Misc
 set wildmenu
-set spell
+set nospell
 
 " Encoding related
 set enc=utf-8
+set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set langmenu=en_US.UTF-8
 language message en_US.UTF-8
-set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 " File type related
 filetype plugin indent on
 
 " Display related
-set ru
-set nu
-set sm
-set hls
-set incsearch
+set ru nu sm hls incsearch
 syntax on
 
 if (has("gui_running"))
@@ -68,6 +67,3 @@ endif
 " =======
 " Plugins
 " =======
-set rtp=~/.vim,$VIMRUNTIME
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
