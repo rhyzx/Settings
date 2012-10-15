@@ -101,11 +101,14 @@ xnoremap <silent> <C-k>  :m'<-2<CR>gv=gv
 xnoremap <silent> <C-j>  :m'>+<CR>gv=gv
 
 " Display special chars
-nmap <leader>l  :set list!<CR>
+nmap <Leader>l  :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 " Quick edit vimrc
-nmap <Leader>v  :tabedit $MYVIMRC<CR>
+nmap <Leader>v  :tabedit ~/.vim/vimrc<CR>
+
+" Quick edit @VIM_CHEAT
+nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
 
 " Dupliate line
 " @TODO
@@ -132,6 +135,9 @@ set laststatus=2 "Powerline
 " ========
 " Tests
 " ========
+
+" Auto reload vimrc
+" @TODO
 
 
 " Tabline
@@ -168,3 +174,4 @@ function MyTabLabel(n)
   let winnr = tabpagewinnr(a:n)
   return bufname(buflist[winnr - 1])
 endfunction
+

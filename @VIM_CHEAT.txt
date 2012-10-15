@@ -1,0 +1,106 @@
+POS
+    - h,j,k,l,H,M,L
+    - gg,1G : top
+    - G     : bottom
+    - nG    : n line, n%G
+    - <C-G> : show current pos
+    - 0     : home
+    - ^     : home not null
+    - $     : end
+    
+    - <C-F\B> : next, prev page
+    
+    - w,W   : next word(not null chars)
+    - b,B   : back word
+    - e,E   : next word end, ge/gE back
+    
+    - (,)   : next,prev string
+    
+    - H,M,L : viewport top/middle/buttom
+    - zt/z/b: scroll to cursor at top/middle/buttom
+
+    - gd    : go var's defined pos
+    - %     : match code block
+    - ms    : mark [s]
+    - `s    : go mark [s]
+    - `.    : last edit pos
+
+    - <C-O/L>   : prev/next cursor pos
+
+EDIT
+    - a,A,i,I,o,O
+    - u     : undo
+    - <C-Y> : redo
+    
+    - r,R   : replace(ever)
+    - d,D   : delete(after) //dd del line
+    - y,Y   : copy(line) //Y=yy
+    - p,P,[p : paste after/forward (with auto index)
+    - x,X,s : del char
+    
+    - J     : join next line
+    - .     : repeat
+    
+AMOUNT
+    - w     : word
+    - e     : word !space
+    
+    - f,F,t,T x : find/until x //df[e]
+    
+    - im    : inner m // w[('"<(..) //di", diw delete surround word
+    - am    : all, include [] or space
+    
+SEARCH, REPLACE
+    - /String, ?String :search String
+    - *, #  : search current word next/prev
+    - n, N  : next, prev Search
+    
+    - #,# s/old/new/g : # line to # line
+    
+    - q/,q? : search history
+
+SECTION
+    - v, V, <C-V> : char, line, block selection
+    - u, U, ~ : lower, upper, reverse
+    
+    - <C-V>G$A : line end edit
+    
+CLIP
+    - "k    : use [k] clip //"xyy = V"xy, "xp paste
+    - "+    : system clip
+    
+MACRO
+    - qx    : record
+    - @x    : use record
+    
+OTHER
+    - <C-P/N> : auto complete
+    - <C-G>   : show info?
+    - Q       : ex mode
+    - q:      : command history
+    
+PLUGS
+    - matchit.vim 
+
+
+
+COMMANDS
+    - ls    : show buffers
+    - bn    : go buffer [n]
+    - bdn   : delete buffer [n]
+    
+
+NERDTREE
+    - o
+    - t,T
+
+    
+    
+    
+    
+    
+    
+===============
+SCRIPT
+    - let @"="value" :modify clip //""p -> value
+    - autocmd eventName *.js :action
