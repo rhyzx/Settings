@@ -65,7 +65,6 @@ else
     set wrap
 endif
 
-
 " Session
 set ssop=buffers,tabpages,slash,unix ",sesdir
 if filereadable($HOME . '/.vimss')
@@ -82,7 +81,14 @@ let mapleader = ","
 " Combos
 " ======
 
-" Tab
+" Tab pages control
+nmap <silent> <C-h>      :tabprevious<CR>
+nmap <silent> <C-S-TAB>  :tabprevious<CR>
+nmap <silent> <C-l>      :tabnext<CR>
+nmap <silent> <C-TAB>    :tabnext<CR>
+nmap <silent> <C-t>      :tabnew<CR>
+
+" Indent control
 nnoremap <TAB>      >>
 nnoremap <S-TAB>    <<
 vnoremap <TAB>      >gv
@@ -95,9 +101,14 @@ xnoremap <silent> <C-k>  :m'<-2<CR>gv=gv
 xnoremap <silent> <C-j>  :m'>+<CR>gv=gv
 
 " Display special chars
-nmap <leader>l :set list!<CR>
+nmap <leader>l  :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
+" Quick edit vimrc
+nmap <Leader>v  :tabedit $MYVIMRC<CR>
+
+" Dupliate line
+" @TODO
 
 
 " =======
@@ -105,10 +116,55 @@ set listchars=tab:▸\ ,eol:¬
 " =======
 map <Leader>m   :NERDTreeToggle<CR>
 
-
-
+set laststatus=2 "Powerline
 
 
 " =========
 " Functions
 " =========
+
+
+
+
+
+
+
+" ========
+" Tests
+" ========
+
+
+" Tabline
+function MyTabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    " select the highlighting
+    if i + 1 == tabpagenr()
+      let s .= '%#TabLineSel#'
+    else
+      let s .= '%#TabLine#'
+    endif
+
+    " set the tab page number (for mouse clicks)
+    let s .= '%' . (i + 1) . 'T'
+
+    " the label is made by MyTabLabel()
+    let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
+  endfor
+
+  " after the last tab fill with TabLineFill and reset tab page nr
+  let s .= '%#TabLineFill#%T'
+
+  " right-align the label to close the current tab page
+  if tabpagenr('$') > 1
+    let s .= '%=%#TabLine#%999Xclose'
+  endif
+
+  return s
+endfunction
+    
+function MyTabLabel(n)
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  return bufname(buflist[winnr - 1])
+endfunction
