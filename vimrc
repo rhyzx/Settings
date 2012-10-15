@@ -4,6 +4,7 @@ call pathogen#infect()
 
 
 set nocp
+set history=512
 
 " Tab related
 set ts=4 sw=4 et
@@ -39,6 +40,8 @@ set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set langmenu=en_US.UTF-8
 language message en_US.UTF-8
 
+set ffs=unix,dos,mac
+
 " File type related
 filetype plugin indent on
 
@@ -63,7 +66,49 @@ else
 endif
 
 
+" Session
+set ssop=buffers,tabpages,slash,unix ",sesdir
+if filereadable($HOME . '/.vimss')
+    au VimEnter * source ~/.vimss
+endif
+au VimLeave * mks! ~/.vimss
+
+
+" =================
+let mapleader = ","
+
+
+" ======
+" Combos
+" ======
+
+" Tab
+nnoremap <TAB>      >>
+nnoremap <S-TAB>    <<
+vnoremap <TAB>      >gv
+vnoremap <S-TAB>    <gv
+
+" Line(s) move up/down
+nnoremap <silent> <C-k>  :m-2<CR>==
+nnoremap <silent> <C-j>  :m+<CR>==
+xnoremap <silent> <C-k>  :m'<-2<CR>gv=gv
+xnoremap <silent> <C-j>  :m'>+<CR>gv=gv
+
+" Display special chars
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+
 
 " =======
 " Plugins
 " =======
+map <Leader>m   :NERDTreeToggle<CR>
+
+
+
+
+
+" =========
+" Functions
+" =========
