@@ -5,6 +5,7 @@ call pathogen#infect()
 
 set nocp
 set history=512
+set dir=$TEMP
 
 " Tab related
 set ts=4 sw=4 et
@@ -17,7 +18,7 @@ set lbr
 set fo+=mB
 
 " Indent related
-set cin
+" set cin
 set ai
 set cino=:0g0t0(susj1
 
@@ -45,6 +46,7 @@ set ffs=unix,dos,mac
 
 " File type related
 filetype plugin indent on
+autocmd BufRead,BufNewFile *.less set filetype=css syntax=less
 
 " Display related
 set ru nu sm hls incsearch
@@ -67,9 +69,9 @@ else
 endif
 
 " Session
-set ssop=tabpages,slash,unix ",buffers,sesdir
+set ssop=tabpages,blank,slash,unix ",buffers,sesdir
 if filereadable($HOME . '/.vimss')
-    au VimEnter * source ~/.vimss
+    au VimEnter * nested source ~/.vimss
 endif
 au VimLeave * mks! ~/.vimss
 
@@ -114,6 +116,8 @@ nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
 " Dupliate line
 " @TODO
 
+" Win paste
+imap <C-V> <ESC>"+pa
 
 " =======
 " Plugins

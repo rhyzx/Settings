@@ -89,6 +89,9 @@ COMMANDS
     - bn    : go buffer [n]
     - bdn   : delete buffer [n]
     
+    - vimgrep string *  : find file in *
+    - copen             : show find file list
+    - cn, cp            : show n/p finded file
 
 NERDTREE
     - o
