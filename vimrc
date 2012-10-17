@@ -33,6 +33,7 @@ set selection=inclusive
 " Misc
 set wildmenu
 set nospell
+set autochdir
 
 " Encoding related
 set enc=utf-8
@@ -66,7 +67,7 @@ else
 endif
 
 " Session
-set ssop=buffers,tabpages,slash,unix ",sesdir
+set ssop=tabpages,slash,unix ",buffers,sesdir
 if filereadable($HOME . '/.vimss')
     au VimEnter * source ~/.vimss
 endif
@@ -117,7 +118,7 @@ nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
 " =======
 " Plugins
 " =======
-map <Leader>m   :NERDTreeToggle<CR>
+map <silent> <Leader>m   :NERDTreeToggle<CR>
 
 set laststatus=2 "Powerline
 
@@ -141,6 +142,7 @@ set laststatus=2 "Powerline
 
 
 " Tabline
+" set tabline=%!MyTabLine()
 function MyTabLine()
   let s = ''
   for i in range(tabpagenr('$'))
