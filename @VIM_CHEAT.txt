@@ -34,6 +34,7 @@ EDIT
     
     - r,R   : replace(ever)
     - d,D   : delete(after) //dd del line
+    - c,C   : change ?/line
     - y,Y   : copy(line) //Y=yy
     - p,P,[p : paste after/forward (with auto index)
     - x,X,s : del char
