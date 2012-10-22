@@ -13,13 +13,12 @@ set smarttab
 set ambiwidth=double
 
 " Format related
-set tw=78
+" set tw=78
 set lbr
 set fo+=mB
 
 " Indent related
-" set cin
-set ai
+set ai "cin
 set cino=:0g0t0(susj1
 
 " Editing related
@@ -47,6 +46,7 @@ set ffs=unix,dos,mac
 " File type related
 filetype plugin indent on
 autocmd BufRead,BufNewFile *.less set filetype=css syntax=less
+autocmd BufRead,BufNewFile *.less setlocal si nocin
 
 " Display related
 set ru nu sm hls incsearch

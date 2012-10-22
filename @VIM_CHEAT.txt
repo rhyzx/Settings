@@ -13,6 +13,8 @@ POS
     - w,W   : next word(not null chars)
     - b,B   : back word
     - e,E   : next word end, ge/gE back
+
+    - f,F,t,T   : find/until char
     
     - (,)   : next,prev string
     
@@ -92,6 +94,8 @@ COMMANDS
     - vimgrep string *  : find file in *
     - copen             : show find file list
     - cn, cp            : show n/p finded file
+
+    - reg   : view clips
 
 NERDTREE
     - o
