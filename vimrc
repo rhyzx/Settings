@@ -69,11 +69,11 @@ else
 endif
 
 " Session
-set ssop=tabpages,blank,slash,unix ",buffers,sesdir
-if filereadable($HOME . '/.vimss')
-    au VimEnter * nested source ~/.vimss
-endif
-au VimLeave * mks! ~/.vimss
+"set ssop=tabpages,blank,slash,unix ",buffers,sesdir
+"if filereadable($HOME . '/.vimss')
+"    au VimEnter * nested source ~/.vimss
+"endif
+"au VimLeave * mks! ~/.vimss
 
 
 " =================
@@ -81,8 +81,13 @@ let mapleader = ","
 
 
 " ======
-" Combos
+" Maps
 " ======
+
+" Esc
+inoremap <ESC> <nop>
+inoremap <CR> <ESC>
+inoremap <S-CR> <END><CR>
 
 " Tab pages control
 nmap <silent> <C-h>      :tabprevious<CR>
@@ -122,7 +127,8 @@ imap <C-V> <ESC>"+pa
 " =======
 " Plugins
 " =======
-map <silent> <Leader>m   :NERDTreeToggle<CR>
+map <silent> <Leader>n   :NERDTreeToggle<CR>
+map <silent> <Leader>m   :MRU<CR>
 
 set laststatus=2 "Powerline
 

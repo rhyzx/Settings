@@ -8,6 +8,8 @@ POS
     - ^     : home not null
     - $     : end
     
+    - gi    : go&edit last edit pos
+    
     - <C-F\B> : next, prev page
     
     - w,W   : next word(not null chars)
