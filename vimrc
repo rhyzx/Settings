@@ -13,13 +13,12 @@ set smarttab
 set ambiwidth=double
 
 " Format related
-set tw=78
+" set tw=78
 set lbr
 set fo+=mB
 
 " Indent related
-" set cin
-set ai
+set ai "cin
 set cino=:0g0t0(susj1
 
 " Editing related
@@ -48,6 +47,7 @@ set ff=unix
 " File type related
 filetype plugin indent on
 autocmd BufRead,BufNewFile *.less set filetype=css syntax=less
+autocmd BufRead,BufNewFile *.less setlocal si nocin
 
 " Display related
 set ru nu sm hls incsearch
@@ -70,11 +70,11 @@ else
 endif
 
 " Session
-set ssop=tabpages,blank,slash,unix ",buffers,sesdir
-if filereadable($HOME . '/.vimss')
-    au VimEnter * nested source ~/.vimss
-endif
-au VimLeave * mks! ~/.vimss
+"set ssop=tabpages,blank,slash,unix ",buffers,sesdir
+"if filereadable($HOME . '/.vimss')
+"    au VimEnter * nested source ~/.vimss
+"endif
+"au VimLeave * mks! ~/.vimss
 
 
 " =================
@@ -82,8 +82,13 @@ let mapleader = ","
 
 
 " ======
-" Combos
+" Maps
 " ======
+
+" Esc
+inoremap <ESC> <nop>
+inoremap <CR> <ESC>
+inoremap <S-CR> <END><CR>
 
 " Tab pages control
 nmap <silent> <C-h>      :tabprevious<CR>
@@ -123,7 +128,8 @@ imap <C-V> <ESC>"+pa
 " =======
 " Plugins
 " =======
-map <silent> <Leader>m   :NERDTreeToggle<CR>
+map <silent> <Leader>n   :NERDTreeToggle<CR>
+map <silent> <Leader>m   :MRU<CR>
 
 set laststatus=2 "Powerline
 
