@@ -150,9 +150,8 @@ set laststatus=2 "Powerline
 " Tests
 " ========
 
-" Auto reload vimrc
 " @TODO
-
+" <C-y>i : insert template var // {{?}} // or just expand '{' by zen?
 
 " Tabline
 " set tabline=%!MyTabLine()

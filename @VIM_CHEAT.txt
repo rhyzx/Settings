@@ -50,8 +50,6 @@ EDIT
     - J     : join next line
     - .     : repeat
     
-	- ~		: toggle case
-	
 	
 	=====Insert Mode======
 	- <C-r>n: paste "n clip
@@ -92,9 +90,12 @@ MACRO
     
 OTHER
     - <C-P/N> : auto complete
+	- <C-a/x> : increase/decrease number
     - <C-G>   : show info?
     - Q       : ex mode
     - q:      : command history
+	
+	- ga/g8   : show char code hex/unicode
     
 PLUGS
     - matchit.vim 
