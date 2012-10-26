@@ -43,6 +43,7 @@ set langmenu=en_US.UTF-8
 language message en_US.UTF-8
 
 set ffs=unix,dos,mac
+set ff=unix
 
 " File type related
 filetype plugin indent on
