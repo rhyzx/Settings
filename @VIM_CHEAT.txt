@@ -9,6 +9,8 @@ POS
     - $     : end
     
     - gi    : go&edit last edit pos
+	- g; g,	: go older/newer change
+	- :changes : change list
     
     - <C-F\B> : next, prev page
     
@@ -29,12 +31,14 @@ POS
     - `s    : go mark [s]
     - `.    : last edit pos
 
-    - <C-O/L>   : prev/next cursor pos
+    - <C-o/l>   : prev/next cursor pos
+	
+	- zz h j: scroll center/left... 
 
 EDIT
     - a,A,i,I,o,O
     - u     : undo
-    - <C-Y> : redo
+    - <C-r> : redo
     
     - r,R   : replace(ever)
     - d,D   : delete(after) //dd del line
@@ -46,6 +50,14 @@ EDIT
     - J     : join next line
     - .     : repeat
     
+	- ~		: toggle case
+	
+	
+	=====Insert Mode======
+	- <C-r>n: paste "n clip
+	- <C-t>	: indent
+	- <C-d>	: undent
+	
 AMOUNT
     - w     : word
     - e     : word !space
@@ -94,6 +106,8 @@ COMMANDS
     - bn    : go buffer [n]
     - bdn   : delete buffer [n]
     
+    - q:    : command history
+    
     - vimgrep string *  : find file in *
     - copen             : show find file list
     - cn, cp            : show n/p finded file
@@ -114,3 +128,4 @@ NERDTREE
 SCRIPT
     - let @"="value" :modify clip //""p -> value
     - autocmd eventName *.js :action
+    - command! -nargs=n -complete=types Cname echo 1 : custom command

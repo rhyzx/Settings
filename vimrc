@@ -88,6 +88,7 @@ let mapleader = ","
 " Esc
 inoremap <ESC> <nop>
 inoremap <CR> <ESC>
+vnoremap <CR> <ESC>
 inoremap <S-CR> <END><CR>
 
 " Tab pages control
@@ -113,8 +114,9 @@ xnoremap <silent> <C-j>  :m'>+<CR>gv=gv
 nmap <Leader>l  :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
-" Quick edit vimrc
+" Quick edit/reload vimrc
 nmap <Leader>v  :tabedit ~/.vim/vimrc<CR>
+nmap <Leader>s  :source ~/.vim/vimrc<CR>
 
 " Quick edit @VIM_CHEAT
 nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
@@ -123,7 +125,7 @@ nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
 " @TODO
 
 " Win paste
-imap <C-V> <ESC>"+pa
+imap <C-V> <C-r>+
 
 " =======
 " Plugins
