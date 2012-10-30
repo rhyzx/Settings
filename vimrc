@@ -5,7 +5,7 @@ call pathogen#infect()
 
 set nocp
 set history=512
-set dir=$TEMP
+set dir=$TEMP,$TMP
 
 " Tab related
 set ts=4 sw=4 et
@@ -42,6 +42,7 @@ set langmenu=en_US.UTF-8
 language message en_US.UTF-8
 
 set ffs=unix,dos,mac
+set ff=unix
 
 " File type related
 filetype plugin indent on
@@ -116,7 +117,9 @@ imap <C-BS> <C-o>db
 " @TODO
 
 " Win paste
-inoremap <C-V> <ESC>"+pa
+imap <C-V> <C-r>+
+
+
 
 " ======
 " Misc
@@ -126,11 +129,14 @@ inoremap <C-V> <ESC>"+pa
 nmap <Leader>l  :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
-" Quick edit vimrc
+" Quick edit/reload vimrc
 nmap <Leader>v  :tabedit ~/.vim/vimrc<CR>
+nmap <Leader>s  :source  ~/.vim/vimrc<CR>
 
 " Quick edit @VIM_CHEAT
 nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
+
+
 
 " =======
 " Plugins
@@ -152,9 +158,8 @@ set laststatus=2 "Powerline
 " Tests
 " ========
 
-" Auto reload vimrc
 " @TODO
-
+" <C-y>i : insert template var // {{?}} // or just expand '{' by zen?
 
 " Tabline
 " set tabline=%!MyTabLine()
