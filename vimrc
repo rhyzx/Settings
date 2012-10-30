@@ -85,9 +85,10 @@ let mapleader = ","
 " ======
 
 " Esc
-inoremap <ESC> <nop>
-inoremap <CR> <ESC>
-inoremap <S-CR> <END><CR>
+inoremap <ESC>  <nop>
+inoremap <CR>   <ESC>
+vnoremap <CR>   <ESC>
+inoremap <C-CR> <END><CR>
 
 " Tab pages control
 nmap <silent> <C-h>      :tabprevious<CR>
@@ -108,6 +109,19 @@ nnoremap <silent> <C-j>  :m+<CR>==
 xnoremap <silent> <C-k>  :m'<-2<CR>gv=gv
 xnoremap <silent> <C-j>  :m'>+<CR>gv=gv
 
+" Fast delete
+imap <C-BS> <C-o>db
+
+" Dupliate line
+" @TODO
+
+" Win paste
+inoremap <C-V> <ESC>"+pa
+
+" ======
+" Misc
+" ======
+
 " Display special chars
 nmap <Leader>l  :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
@@ -117,12 +131,6 @@ nmap <Leader>v  :tabedit ~/.vim/vimrc<CR>
 
 " Quick edit @VIM_CHEAT
 nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
-
-" Dupliate line
-" @TODO
-
-" Win paste
-imap <C-V> <ESC>"+pa
 
 " =======
 " Plugins
@@ -136,9 +144,6 @@ set laststatus=2 "Powerline
 " =========
 " Functions
 " =========
-
-
-
 
 
 

@@ -45,6 +45,8 @@ EDIT
     
     - J     : join next line
     - .     : repeat
+
+    - <C-o> : temporary normal mode
     
 AMOUNT
     - w     : word
