@@ -77,13 +77,12 @@ endif
 "au VimLeave * mks! ~/.vimss
 
 
-" =================
-let mapleader = ","
 
 
 " ======
 " Maps
 " ======
+let mapleader = ","
 
 " Esc
 inoremap <ESC>  <nop>
@@ -93,10 +92,12 @@ inoremap <C-CR> <END><CR>
 
 " Tab pages control
 nmap <silent> <C-h>      :tabprevious<CR>
-nmap <silent> <C-S-TAB>  :tabprevious<CR>
 nmap <silent> <C-l>      :tabnext<CR>
-nmap <silent> <C-TAB>    :tabnext<CR>
 nmap <silent> <C-t>      :tabnew<CR>
+
+" Window control
+nmap <C-TAB> <C-w>w
+nmap <C-S-TAB> <C-w>W
 
 " Indent control
 nnoremap <TAB>      >>
@@ -110,16 +111,18 @@ nnoremap <silent> <C-j>  :m+<CR>==
 xnoremap <silent> <C-k>  :m'<-2<CR>gv=gv
 xnoremap <silent> <C-j>  :m'>+<CR>gv=gv
 
-" Fast delete
+" Delete
+imap <S-BS> <DEL>
 imap <C-BS> <C-o>db
-
-" Dupliate line
-" @TODO
 
 " Win paste
 imap <C-V> <C-r>+
 
+" No hilight search
+nmap <silent> // :noh<CR>
 
+" Save as
+cnoreabbrev W saveas
 
 " ======
 " Misc
@@ -142,6 +145,7 @@ nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
 " Plugins
 " =======
 map <silent> <Leader>n   :NERDTreeToggle<CR>
+map <silent> <Leader>b   :NERDTree<CR>
 map <silent> <Leader>m   :MRU<CR>
 
 set laststatus=2 "Powerline
