@@ -5,23 +5,23 @@ call pathogen#infect()
 
 set nocp
 set history=512
-set dir=$TEMP,$TMP
+set dir=$TEMP,$TMP,$TMPDIR
 
-" Tab related
+" Tab
 set ts=4 sw=4 et
 set smarttab
 set ambiwidth=double
 
-" Format related
+" Format
 " set tw=78
 set lbr
 set fo+=mB
 
-" Indent related
+" Indent
 set ai "cin
 set cino=:0g0t0(susj1
 
-" Editing related
+" Editing
 set backspace=indent,eol,start
 set whichwrap=b,s,<,>,[,]
 set mouse=a
@@ -35,7 +35,7 @@ set wildmenu
 set nospell
 set autochdir
 
-" Encoding related
+" Encoding
 set enc=utf-8
 set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set langmenu=en_US.UTF-8
@@ -44,15 +44,21 @@ language message en_US.UTF-8
 set ffs=unix,dos,mac
 set ff=unix
 
-" File type related
+" File type
 filetype plugin indent on
 autocmd BufRead,BufNewFile *.less set filetype=css syntax=less
 autocmd BufRead,BufNewFile *.less setlocal si nocin
 
-" Display related
+" Display
 set ru nu sm hls incsearch
 syntax on
 
+" IM
+"set noimdisable
+"set iminsert=0
+"set imsearch=0
+
+" UI
 if (has("gui_running"))
     set go=     "hide all gui
     colo obsidian2
@@ -61,6 +67,9 @@ if (has("gui_running"))
     if (has("win32"))
         set guifont=Consolas:h11:cANSI
         set guifontwide=NSimSun:h11:cGB2312
+    elseif (has("mac"))
+        set go=e
+        set guifont=Menlo:h13
     else
         set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
     endif
@@ -85,7 +94,7 @@ endif
 let mapleader = ","
 
 " Esc
-inoremap <ESC>  <nop>
+" inoremap <ESC>  <nop> "restrict use
 inoremap <CR>   <ESC>
 vnoremap <CR>   <ESC>
 inoremap <C-CR> <END><CR>
@@ -113,7 +122,7 @@ xnoremap <silent> <C-j>  :m'>+<CR>gv=gv
 
 " Delete
 imap <S-BS> <DEL>
-imap <C-BS> <C-o>db
+imap <C-BS> <C-o>daw
 
 " Win paste
 imap <C-V> <C-r>+
@@ -123,6 +132,24 @@ nmap <silent> // :noh<CR>
 
 " Save as
 cnoreabbrev W saveas
+
+" Autoclose
+"inoremap ( ()i
+"inoremap ) =ClosePair(')')
+"inoremap { {}i
+"inoremap } =ClosePair('}')
+"inoremap [ []i
+"inoremap ] =ClosePair(']')
+"inoremap < <>i
+"inoremap > =ClosePair('>')
+
+"function ClosePair(char)
+   "if getline('.')[col('.') - 1] == a:char
+       "return "\"
+   "else
+       "return a:char
+   "endif
+"endf
 
 " ======
 " Misc
@@ -134,7 +161,7 @@ set listchars=tab:▸\ ,eol:¬
 
 " Quick edit/reload vimrc
 nmap <Leader>v  :tabedit ~/.vim/vimrc<CR>
-nmap <Leader>s  :source  ~/.vim/vimrc<CR>
+nmap <Leader>s  :source  ~/.vim/vimrc<CR> "error
 
 " Quick edit @VIM_CHEAT
 nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
