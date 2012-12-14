@@ -100,9 +100,13 @@ vnoremap <CR>   <ESC>
 inoremap <C-CR> <END><CR>
 
 " Tab pages control
-nmap <silent> <C-h>      :tabprevious<CR>
-nmap <silent> <C-l>      :tabnext<CR>
+" nmap <silent> <C-h>      :tabprevious<CR>
+" nmap <silent> <C-l>      :tabnext<CR>
+" for win
 nmap <silent> <C-t>      :tabnew<CR>
+" for mac
+nmap <silent> <D-A-LEFT>   :tabprevious<CR>
+nmap <silent> <D-A-RIGHT>  :tabnext<CR>
 
 " Window control
 nmap <C-TAB> <C-w>w
