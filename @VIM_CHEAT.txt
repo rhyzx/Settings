@@ -50,13 +50,14 @@ EDIT
     - J     : join next line
     - .     : repeat
 
-    - <C-o> : temporary normal mode
     
 	
 	=====Insert Mode======
+    - <C-o> : temporary normal mode
 	- <C-r>n: paste "n clip
 	- <C-t>	: indent
 	- <C-d>	: undent
+    - <C-w> : window control h,j,k,l, o
 	
 AMOUNT
     - w     : word
@@ -129,6 +130,6 @@ NERDTREE
     
 ===============
 SCRIPT
-    - let @"="value" :modify clip //""p -> value
+    - let @"="value" :modify " clip //""p -> value //expand("%:p"):file name
     - autocmd eventName *.js :action
     - command! -nargs=n -complete=types Cname echo 1 : custom command
