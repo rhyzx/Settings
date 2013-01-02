@@ -8,10 +8,14 @@ export PROMPT_COMMAND='echo -ne "\\033]0;${PWD/#$HOME/~}\\007"'
 #brew path
 export BREW_PATH=`brew --prefix`
 
-#PATH
-export PATH=~/.vim/shells:${BREW_PATH}/bin:${BREW_PATH}/sbin:${BREW_PATH}/share/npm/bin:${PATH}
+#npm path
+export NPM_PATH=`npm prefix -g`
+
 #PATH for NODE global modules
-export NODE_PATH=${BREW_PATH}/share/npm/lib/node_modules
+export NODE_PATH=${NPM_PATH}/lib/node_modules
+
+#PATH
+export PATH=~/.vim/shells:${BREW_PATH}/bin:${BREW_PATH}/sbin:${NPM_PATH}/bin:${PATH}
 
 
 # enable programmable completion features (you don't need to enable
