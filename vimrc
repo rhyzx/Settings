@@ -137,6 +137,9 @@ nmap <silent> // :noh<CR>
 " Save as
 cnoreabbrev W saveas
 
+" Current file name
+cnoreabbrev - <C-R>=@%<CR>
+
 " Autoclose
 "inoremap ( ()i
 "inoremap ) =ClosePair(')')
