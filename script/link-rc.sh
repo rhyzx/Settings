@@ -1,5 +1,7 @@
 #!/bin/sh
+cd "$(dirname $0)/.."
 
-ln -s ../vimrc			../.vimrc
-ln -s ../bash_profile	../.bash_profile
-ln -s ../gitconfig		../.gitconfig
+dir="$(basename $PWD)"
+for rc in _*;
+  do ln -sf "$dir/$rc" "../.${rc:1}";
+done;
