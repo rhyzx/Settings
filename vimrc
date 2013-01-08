@@ -1,6 +1,8 @@
-set rtp=~/.vim,$VIMRUNTIME
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+let $DIR = "~/.dot"
+
+set rtp=$DIR,$VIMRUNTIME
+runtime vim-bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect('vim-bundle')
 
 
 set nocp
@@ -167,11 +169,12 @@ nmap <Leader>l  :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 " Quick edit/reload vimrc
-nmap <Leader>v  :tabedit ~/.vim/vimrc<CR>
-nmap <Leader>s  :source  ~/.vim/vimrc<CR> "error
+" nmap <Leader>v  :tabedit ~/.vim/vimrc<CR>
+nmap <Leader>v  :tabedit $MYVIMRC<CR>
+nmap <Leader>s  :source  $MYVIMRC<CR> "error
 
-" Quick edit @VIM_CHEAT
-nmap <Leader>c  :tabedit ~/.vim/@VIM_CHEAT.txt<CR>
+" Quick edit cheat
+nmap <Leader>c  :tabedit $DIR/misc/vim-cheat.md<CR>
 
 
 
@@ -193,7 +196,7 @@ set laststatus=2 "Powerline
 
 
 " ========
-" Tests
+" Test
 " ========
 
 " @TODO
