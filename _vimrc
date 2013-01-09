@@ -1,4 +1,4 @@
-let $DIR = "~/.dot"
+let $DIR = "~/.config"
 
 set rtp=$DIR,$VIMRUNTIME
 runtime vim-bundle/vim-pathogen/autoload/pathogen.vim
