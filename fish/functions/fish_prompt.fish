@@ -1,9 +1,6 @@
-function parse_git_branch
-    sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
-end
-
 function fish_prompt -d "Write out the prompt"
-    # printf '%s%s@%s%s' (set_color red) (whoami) (hostname|cut -d . -f 1) (set_color normal) 
+
+    # User name
     printf '%s%s%s' (set_color yellow) (whoami) (set_color normal) 
 
     # Color writeable dirs green, read-only dirs red
@@ -13,19 +10,15 @@ function fish_prompt -d "Write out the prompt"
         printf ' %s%s' (set_color red) (prompt_pwd)
     end
 
-        # Print subversion tag or branch
-        if test -d ".svn"
-                printf ' %s%s%s' (set_color normal) (set_color blue) (parse_svn_tag_or_branch)
-        end
-        
-    # Print subversion revision
-    if test -d ".svn"
-        printf '%s%s@%s' (set_color normal) (set_color blue) (parse_svn_revision)
-    end
+    # Git branch
+    printf '%s%s' (set_color normal) (__fish_git_prompt) (set_color red)
 
-    # Print git branch
-    if test -d ".git"
-        printf ' %s%s%s' (set_color normal) (set_color blue) (parse_git_branch)
+    switch $USER
+        case root
+        printf ' # '
+
+        case '*'
+        printf ' > '
     end
-    printf '%s > ' (set_color red)
+    printf '%s' (set_color normal)
 end
