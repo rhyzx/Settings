@@ -1,18 +1,19 @@
 [user]
-	name = U0
-	email= rhyzix@gmail.com
+    name = U0
+    email= rhyzix@gmail.com
 [alias]
     c = commit -am
-	s = status -s
+    s = status -s
     co = checkout
-	mg = merge --no-ff
+    mg = merge --no-ff
     p = push -u
-	pp = !git pull && git push
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    pp = !git pull && git push
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	root = rev-parse --show-toplevel
 [core]
-	autocrlf = input
+    autocrlf = input
     editor = vim
 [color]
-	ui = auto
+    ui = auto
 [push]
-	default = upstream
+    default = upstream
