@@ -22,9 +22,9 @@ set __fish_git_prompt_showstashstate true
 
 # git state color
 # prefix/suffix/bare/merging/branch/stagedstate/invalidstate/untrackedfiles/upstream
-set __fish_git_prompt_color blue
+set __fish_git_prompt_color magenta
 #set __fish_git_prompt_color_dirtystate red
-#set __fish_git_prompt_color_stashstate magenta
+#set __fish_git_prompt_color_stashstate blue
 
 # git state char
 # upstream_equal/ahead/behind/diverged
