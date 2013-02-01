@@ -64,6 +64,7 @@ AMOUNT
     - e     : word !space
     
     - f,F,t,T x : find/until x //df[e]
+    - ;     : refind
     
     - im    : inner m // w[('"<(..) //di", diw delete surround word
     - am    : all, include [] or space
