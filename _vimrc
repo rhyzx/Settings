@@ -39,7 +39,7 @@ set autochdir
 
 " Encoding
 set enc=utf-8
-set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set fencs=Unicode
 set langmenu=en_US.UTF-8
 language message en_US.UTF-8
 
