@@ -194,8 +194,8 @@ let g:UltiSnipsJumpForwardTrigger   = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
 
 let g:UltiSnipsEditSplit            = "vertical"        " edit in split window
-let g:UltiSnipsSnippetsDir          = $DIR ."/vim-snippets" " custom snippets dir
-let g:UltiSnipsSnippetDirectories   = ["vim-snippets"]  " only use custom snippets
+let g:UltiSnipsSnippetsDir          = $DIR ."/vim-snippet" " custom snippets dir
+let g:UltiSnipsSnippetDirectories   = ["vim-snippet"]   " only use custom snippets
 
 " =========
 " Functions
