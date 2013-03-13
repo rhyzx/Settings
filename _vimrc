@@ -1,8 +1,8 @@
-let $DIR = "~/.config"
+let $DIR    = "~/.config"
 
 set rtp=$DIR,$VIMRUNTIME
 runtime vim-bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect('vim-bundle')
+call pathogen#infect("vim-bundle")
 
 
 set nocp
@@ -188,6 +188,14 @@ map <silent> <Leader>m   :MRU<CR>
 
 set laststatus=2 "Powerline
 
+" UltiSnips
+let g:UltiSnipsExpandTrigger        = "<tab>"
+let g:UltiSnipsJumpForwardTrigger   = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
+
+let g:UltiSnipsEditSplit            = "vertical"        " edit in split window
+let g:UltiSnipsSnippetsDir          = $DIR ."/vim-snippets" " custom snippets dir
+let g:UltiSnipsSnippetDirectories   = ["vim-snippets"]  " only use custom snippets
 
 " =========
 " Functions
