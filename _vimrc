@@ -143,6 +143,9 @@ cnoreabbrev W saveas
 " Current file name
 cnoreabbrev - <C-R>=@%<CR>
 
+" Help in new tab
+cnoreabbrev h tab help
+
 " Autoclose
 "inoremap ( ()i
 "inoremap ) =ClosePair(')')
@@ -170,9 +173,8 @@ nmap <Leader>l  :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 " Quick edit/reload vimrc
-" nmap <Leader>v  :tabedit ~/.vim/vimrc<CR>
 nmap <Leader>v  :tabedit $MYVIMRC<CR>
-nmap <Leader>s  :source  $MYVIMRC<CR> "error
+"nmap <Leader>s  :source  $MYVIMRC<CR> "error
 
 " Quick edit cheat
 nmap <Leader>c  :tabedit $DIR/misc/vim-cheat.md<CR>
@@ -189,6 +191,8 @@ map <silent> <Leader>m   :MRU<CR>
 set laststatus=2 "Powerline
 
 " UltiSnips
+nmap <Leader>s  :UltiSnipsEdit<CR>
+
 let g:UltiSnipsExpandTrigger        = "<tab>"
 let g:UltiSnipsJumpForwardTrigger   = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
