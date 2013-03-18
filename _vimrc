@@ -197,6 +197,17 @@ let g:UltiSnipsEditSplit            = "vertical"        " edit in split window
 let g:UltiSnipsSnippetsDir          = $DIR ."/vim-snippet" " custom snippets dir
 let g:UltiSnipsSnippetDirectories   = ["vim-snippet"]   " only use custom snippets
 
+" CtrlP
+let g:ctrlp_map = '<Leader>f'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|exe|swp)$',
+  \ }
+
+
 " =========
 " Functions
 " =========
