@@ -88,3 +88,6 @@
 [submodule "vim-bundle/ctrlp"]
 	path = vim-bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "vim-bundle/vim-stylus"]
+	path = vim-bundle/vim-stylus
+	url = git@github.com:wavded/vim-stylus.git
