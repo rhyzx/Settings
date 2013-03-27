@@ -12,5 +12,5 @@ INFO=`youtube-dl -o "%(title)s.%(ext)s" --get-url --get-filename --cookies="$COO
 FILENAME=`echo "$INFO" | tail -n 1 | tr ":\"" ";'" | tr -d "\\\/*?<>|"`
 URL=`echo "$INFO" | head -n 1`
 
-aria2c -c -x10 -s10 --load-cookies="$COOKIES" -U "$UA" -o "$FILENAME" "$URL"
+aria2c -c -x4 --load-cookies="$COOKIES" -U "$UA" -o "$FILENAME" "$URL"
 rm -r "$TMPD"
