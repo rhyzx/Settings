@@ -15,7 +15,7 @@ set smarttab
 set ambiwidth=double
 
 " Format
-" set tw=78
+" set tw=80
 set lbr
 set fo+=mB
 
@@ -53,6 +53,7 @@ autocmd BufRead,BufNewFile *.less set filetype=css syntax=less
 autocmd BufRead,BufNewFile *.less setlocal si nocin
 
 " Display
+" set cc=80
 set ru nu sm hls incsearch
 syntax on
 
