@@ -3,11 +3,12 @@
     email= rhyzix@gmail.com
 [alias]
     c = commit -am
+    cm = commit -m
     s = status -s
     co = checkout
-    mg = merge --no-ff
+    m = merge --no-ff
     p = push -u
-    pp = !git pull && git push
+    pp = !git pull --rebase && git push
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	root = rev-parse --show-toplevel
 [core]
