@@ -11,7 +11,7 @@ set NPM_PATH (npm prefix -g)
 # node.js global modules path
 set -gx NODE_PATH $NPM_PATH/lib/node_modules
 #PATH
-set PATH ~/.config/script $BREW_PATH/bin $NPM_PATH/bin $PATH
+set PATH ~/.config/script $BREW_PATH/bin $BREW_PATH/sbin $NPM_PATH/bin $PATH
 
 
 # git branch prompt config
