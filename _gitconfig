@@ -11,6 +11,7 @@
     pp = !git pull --rebase && git push
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	root = rev-parse --show-toplevel
+    rd = reset --hard
 [core]
     autocrlf = input
     editor = vim
@@ -18,5 +19,3 @@
     ui = auto
 [push]
     default = upstream
-[http]
-	proxy = http://127.0.0.1:8087/
