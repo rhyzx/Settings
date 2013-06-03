@@ -51,6 +51,9 @@ set ff=unix
 filetype plugin indent on
 autocmd BufRead,BufNewFile *.less set filetype=css syntax=less
 autocmd BufRead,BufNewFile *.less setlocal si nocin
+autocmd BufRead,BufNewFile *.twig set filetype=htmlDjango
+
+autocmd Filetype stylus setlocal ts=2 sw=2
 
 " Display
 " set cc=80
