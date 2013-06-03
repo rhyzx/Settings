@@ -1,11 +1,13 @@
-snippet fn "anonymous function"
-function (${1:arg}) {
+# javascript
+
+snippet fn "anonymous function" w
+function () {
 	${2:// body...}
 }
 endsnippet
 
 snippet fun "function" b
-function ${1:Foo} (${2:arg}) {
+function ${1:Foo}(${2:arg}) {
 	${3:// body...}
 }
 endsnippet
@@ -17,9 +19,8 @@ for (var ${4:i}=0, ${2:item}; $2=${1:items}[$4++];) {
 endsnippet
 
 snippet for "for loop" b
-for (var ${1:i}=0, ${2:len}=${3:items}.length; $1<$2; $1++) {
-    ${4:var item = $2[$1]}
-    $5
+for (var ${11:i}=0, ${12:len}=${3:items}.length; $11<$12; $11++) {
+    ${4:// body...}
 }
 endsnippet
 
@@ -39,4 +40,12 @@ endsnippet
 
 snippet proto "Prototype" b
 ${1:Class}.prototype.${2:method} = $3;
+endsnippet
+
+
+
+# function calls
+
+snippet log "console.log" w
+console.log(${1:'${2:blahblah}'});
 endsnippet
