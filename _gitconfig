@@ -2,16 +2,29 @@
     name = U0
     email= rhyzix@gmail.com
 [alias]
-    c = commit -am
+    c  = commit -am
     cm = commit -m
-    s = status -s
+    ca = commit --amend
+
     co = checkout
+    s = status -s
+
     m = merge --no-ff
+
     p = push -u
     pp = !git pull --rebase && git push
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	root = rev-parse --show-toplevel
+
+    st = stash
+    sp = stash pop
+    sc = stash clear
+
+    r = reset
     rd = reset --hard
+
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+	root = rev-parse --show-toplevel
+    
 [core]
     autocrlf = input
     editor = vim
