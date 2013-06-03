@@ -13,6 +13,9 @@ set -gx NODE_PATH $NPM_PATH/lib/node_modules
 #PATH
 set PATH ~/.config/script $BREW_PATH/bin $BREW_PATH/sbin $NPM_PATH/bin $PATH
 
+# python modules
+set -gx PYTHONPATH $BREW_PATH/lib/python2.7/site-packages
+
 
 # git branch prompt config
 set __fish_git_prompt_showdirtystate true
