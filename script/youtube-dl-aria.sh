@@ -6,7 +6,7 @@ UA=`youtube-dl --dump-user-agent`
 TMPD=`mktemp -t tmp -d` || exit 1
 COOKIES="$TMPD/cookie"
 #INFO=`youtube-dl -o "[%(upload_date)s][%(id)s] %(title)s (by %(uploader)s).%(ext)s" --get-url --get-filename --cookies=123.cookie "$@"`
-INFO=`youtube-dl -o "%(title)s.%(ext)s" --get-url --get-filename --cookies="$COOKIES" "$@"`
+INFO=`youtube-dl -o "%(title)s.%(ext)s" --all-subs --get-url --get-filename --cookies="$COOKIES" "$@"`
 
 
 FILENAME=`echo "$INFO" | tail -n 1 | tr ":\"" ";'" | tr -d "\\\/*?<>|"`
