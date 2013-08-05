@@ -16,9 +16,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/tmhedberg/matchit.git
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = git://github.com/groenewege/vim-less.git
@@ -91,3 +88,6 @@
 [submodule "vim-bundle/vim-stylus"]
 	path = vim-bundle/vim-stylus
 	url = git@github.com:wavded/vim-stylus.git
+[submodule "vim-bundle/vim-airline"]
+	path = vim-bundle/vim-airline
+	url = https://github.com/bling/vim-airline
