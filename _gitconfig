@@ -2,6 +2,11 @@
     name = U0
     email= rhyzix@gmail.com
 [alias]
+    b  = branch
+    bd = branch -d
+    ba = branch -a
+    br = branch -r
+    
     c  = commit -am
     cm = commit -m
     ca = commit --amend
@@ -19,17 +24,31 @@
     st = stash
     sp = stash pop
     sc = stash clear
+    sa = stash apply
 
     r  = reset
     rh = reset --hard
 
+    rb = rebase
+    ra = rebase --abort
+    rs = rebase --skip
+    rc = rebase --continue
+
+    l  = log --oneline
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
-	root = rev-parse --show-toplevel
+    cp = cherry-pick
+    root = rev-parse --show-toplevel
+
+
+    # git svn
+    sd = svn dcommit
+    sr = svn rebase
+    sf = svn fetch
 [core]
     autocrlf = input
     editor = vim
-	excludesfile = ~/.config/gitignore_global
+    excludesfile = ~/.config/gitignore_global
 [color]
     ui = auto
 [push]
