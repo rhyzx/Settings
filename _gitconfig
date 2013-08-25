@@ -34,7 +34,7 @@
     rs = rebase --skip
     rc = rebase --continue
 
-    l  = log --oneline
+    l  = log --oneline --first-parent
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
     cp = cherry-pick
