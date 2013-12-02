@@ -7,9 +7,6 @@
 [submodule "bundle/obsidian2"]
 	path = bundle/obsidian2
 	url = git://github.com/vim-scripts/obsidian2.vim.git
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = git://github.com/mattn/zencoding-vim.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git://github.com/plasticboy/vim-markdown.git
@@ -91,3 +88,6 @@
 [submodule "vim-bundle/vim-airline"]
 	path = vim-bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "vim-bundle/emmet-vim"]
+	path = vim-bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
