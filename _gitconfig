@@ -2,7 +2,7 @@
     name = U0
     email= rhyzix@gmail.com
 [alias]
-    b  = branch
+    b  = branch -vv
     bd = branch -d
     ba = branch -a
     br = branch -r
@@ -10,6 +10,7 @@
     c  = commit -am
     cm = commit -m
     ca = commit --amend
+    caa= commit --amend -a
 
     co = checkout
     s  = status -s
@@ -21,21 +22,24 @@
     pr = pull --rebase
     pp = !git pull --rebase && git push
 
-    st = stash
+    st = stash save # additional message
+    sl = stash list
     sp = stash pop
-    sc = stash clear
+    # sc = stash clear # too danger
     sa = stash apply
 
     r  = reset
     rh = reset --hard
 
     rb = rebase
+    ri = rebase -i
     ra = rebase --abort
     rs = rebase --skip
     rc = rebase --continue
 
     l  = log --oneline --first-parent
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    ls = log --stat
 
     cp = cherry-pick
     root = rev-parse --show-toplevel
