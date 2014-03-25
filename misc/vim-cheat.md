@@ -59,15 +59,15 @@ EDIT
 	- <C-d>	: undent
     - <C-w> : window control h,j,k,l, o
 	
-AMOUNT
+OBJECT
     - w     : word
     - e     : word !space
     
     - f,F,t,T x : find/until x //df[e]
     - ;     : refind
     
-    - im    : inner m // w[('"<(..) //di", diw delete surround word
-    - am    : all, include [] or space
+    - i*    : inner m // w[('"<(..) //di", diw delete surround word
+    - a*    : all, include [] or space
     
 SEARCH, REPLACE
     - /String, ?String :search String
