@@ -1,31 +1,32 @@
-.config
-=======
+# .config
 
-My self using config/rc for vim/shell/etc..
+My self using config/rc for vim/shell/etc…
 
-![screenshot](https://raw.github.com/rhyzx/.config/master/screenshot/git_state_display.png)
+![screenshot](https://raw.github.com/rhyzx/.config/master/screenshots/git_state_display.png)
 
-Install
--------
+## Installation
 
-`$ cd ~`
-`$ git clone git@github.com:rhyzx/.config.git & cd .config`
-
-
-Link rc files
--------------
-
-`$ script/link-rc.sh`
+```sh
+> cd ~
+> git clone git@github.com:rhyzx/.config.git
+```
 
 
-Sync Vim bundle
----------------
+## Link rc files
 
-`git submodule update --init --recursive`
+```sh
+$ scripts/link-rc.sh
+```
 
 
-Scripts
--------
+## Sync Vim bundles
 
- - **git-submodule-mv.sh** bat move vim-bundle's path
+```sh
+git submodule update --init --recursive
+```
+
+
+## Scripts
+
+- git-submodule-mv.sh: bat move vim-bundle's path
 

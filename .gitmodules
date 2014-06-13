@@ -1,93 +1,57 @@
-[submodule "bundle/vim-pathogen"]
-	path = bundle/vim-pathogen
-	url = git://github.com/tpope/vim-pathogen.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
-[submodule "bundle/obsidian2"]
-	path = bundle/obsidian2
-	url = git://github.com/vim-scripts/obsidian2.vim.git
-[submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = git://github.com/plasticboy/vim-markdown.git
-[submodule "bundle/matchit"]
-	path = bundle/matchit
-	url = git://github.com/tmhedberg/matchit.git
-[submodule "bundle/vim-less"]
-	path = bundle/vim-less
-	url = git://github.com/groenewege/vim-less.git
-[submodule "bundle/vim-javascript"]
-	path = bundle/vim-javascript
-	url = git://github.com/pangloss/vim-javascript.git
-[submodule "bundle/mru"]
-	path = bundle/mru
-	url = git://github.com/vim-scripts/mru.vim.git
-[submodule "bundle/jshint"]
-	path = bundle/jshint
-	url = git://github.com/walm/jshint.vim.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/jsbeautify"]
-	path = bundle/jsbeautify
+[submodule "vim-bundles/jsbeautify"]
+	path = vim-bundles/jsbeautify
 	url = git://github.com/maksimr/vim-jsbeautify.git
-[submodule "bundle/vim-jade"]
-	path = bundle/vim-jade
-	url = git://github.com/digitaltoad/vim-jade.git
-[submodule "vim-bundle/jsbeautify"]
-	path = vim-bundle/jsbeautify
-	url = git://github.com/maksimr/vim-jsbeautify.git
-[submodule "vim-bundle/jshint"]
-	path = vim-bundle/jshint
+[submodule "vim-bundles/jshint"]
+	path = vim-bundles/jshint
 	url = git://github.com/walm/jshint.vim.git
-[submodule "vim-bundle/matchit"]
-	path = vim-bundle/matchit
+[submodule "vim-bundles/matchit"]
+	path = vim-bundles/matchit
 	url = git://github.com/tmhedberg/matchit.git
-[submodule "vim-bundle/mru"]
-	path = vim-bundle/mru
+[submodule "vim-bundles/mru"]
+	path = vim-bundles/mru
 	url = git://github.com/vim-scripts/mru.vim.git
-[submodule "vim-bundle/nerdcommenter"]
-	path = vim-bundle/nerdcommenter
+[submodule "vim-bundles/nerdcommenter"]
+	path = vim-bundles/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "vim-bundle/nerdtree"]
-	path = vim-bundle/nerdtree
+[submodule "vim-bundles/nerdtree"]
+	path = vim-bundles/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "vim-bundle/obsidian2"]
-	path = vim-bundle/obsidian2
+[submodule "vim-bundles/obsidian2"]
+	path = vim-bundles/obsidian2
 	url = git://github.com/vim-scripts/obsidian2.vim.git
-[submodule "vim-bundle/vim-jade"]
-	path = vim-bundle/vim-jade
+[submodule "vim-bundles/vim-jade"]
+	path = vim-bundles/vim-jade
 	url = git://github.com/digitaltoad/vim-jade.git
-[submodule "vim-bundle/vim-javascript"]
-	path = vim-bundle/vim-javascript
+[submodule "vim-bundles/vim-javascript"]
+	path = vim-bundles/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
-[submodule "vim-bundle/vim-less"]
-	path = vim-bundle/vim-less
+[submodule "vim-bundles/vim-less"]
+	path = vim-bundles/vim-less
 	url = git://github.com/groenewege/vim-less.git
-[submodule "vim-bundle/vim-markdown"]
-	path = vim-bundle/vim-markdown
+[submodule "vim-bundles/vim-markdown"]
+	path = vim-bundles/vim-markdown
 	url = git://github.com/plasticboy/vim-markdown.git
-[submodule "vim-bundle/vim-pathogen"]
-	path = vim-bundle/vim-pathogen
+[submodule "vim-bundles/vim-pathogen"]
+	path = vim-bundles/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "vim-bundle/vim-powerline"]
-	path = vim-bundle/vim-powerline
+[submodule "vim-bundles/vim-powerline"]
+	path = vim-bundles/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
-[submodule "vim-bundle/zencoding-vim"]
-	path = vim-bundle/zencoding-vim
+[submodule "vim-bundles/zencoding-vim"]
+	path = vim-bundles/zencoding-vim
 	url = git://github.com/mattn/zencoding-vim.git
-[submodule "vim-bundle/ultisnips"]
-	path = vim-bundle/ultisnips
+[submodule "vim-bundles/ultisnips"]
+	path = vim-bundles/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
-[submodule "vim-bundle/ctrlp"]
-	path = vim-bundle/ctrlp
+[submodule "vim-bundles/ctrlp"]
+	path = vim-bundles/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
-[submodule "vim-bundle/vim-stylus"]
-	path = vim-bundle/vim-stylus
+[submodule "vim-bundles/vim-stylus"]
+	path = vim-bundles/vim-stylus
 	url = git@github.com:wavded/vim-stylus.git
-[submodule "vim-bundle/vim-airline"]
-	path = vim-bundle/vim-airline
+[submodule "vim-bundles/vim-airline"]
+	path = vim-bundles/vim-airline
 	url = https://github.com/bling/vim-airline
-[submodule "vim-bundle/emmet-vim"]
-	path = vim-bundle/emmet-vim
+[submodule "vim-bundles/emmet-vim"]
+	path = vim-bundles/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git

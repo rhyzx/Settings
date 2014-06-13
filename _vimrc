@@ -1,8 +1,8 @@
 let $DIR    = "~/.config"
 
 set rtp=$DIR,$VIMRUNTIME
-runtime vim-bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect("vim-bundle")
+runtime vim-bundles/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect("vim-bundles")
 
 
 set nocp
@@ -202,8 +202,8 @@ let g:UltiSnipsJumpForwardTrigger   = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
 
 let g:UltiSnipsEditSplit            = "vertical"        " edit in split window
-let g:UltiSnipsSnippetsDir          = $DIR ."/vim-snippet" " custom snippets dir
-let g:UltiSnipsSnippetDirectories   = ["vim-snippet"]   " only use custom snippets
+let g:UltiSnipsSnippetsDir          = $DIR ."/vim-snippets" " custom snippets dir
+let g:UltiSnipsSnippetDirectories   = ["vim-snippets"]   " only use custom snippets
 
 " CtrlP
 let g:ctrlp_map = '<Leader>f'
