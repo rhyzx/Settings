@@ -27,6 +27,7 @@
     sp = stash pop
     # sc = stash clear # too danger
     sa = stash apply
+    ss = "!f() { git stash show stash@{${1-0}}; }; f"
 
     r  = reset
     rh = reset --hard
