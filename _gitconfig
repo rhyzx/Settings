@@ -1,5 +1,5 @@
 [user]
-    name = U0
+    name = rhyzx
     email= rhyzix@gmail.com
 [alias]
     b  = branch -vv
@@ -9,8 +9,12 @@
     
     c  = commit -am
     cm = commit -m
-    ca = commit --amend
-    caa= commit --amend -a
+    ce = commit --amend
+    ca = commit --amend --no-edit
+    cau= commit --amend --reset-author --no-edit
+    caa= commit --amend -a --no-edit
+
+    dif = diff --cached
 
     co = checkout
     s  = status -s
@@ -28,6 +32,7 @@
     # sc = stash clear # too danger
     sa = stash apply
     ss = "!f() { git stash show stash@{${1-0}}; }; f"
+    sss= "!f() { git stash show stash@{${1-0}} -p; }; f"
 
     r  = reset
     rh = reset --hard
@@ -50,6 +55,9 @@
     sd = svn dcommit
     sr = svn rebase
     sf = svn fetch
+
+    # set email & username for company
+    config2 = "!f() { git config user.name '2'; git config user.email '2@me.com'; }; f"
 [core]
     autocrlf = input
     editor = vim
@@ -58,3 +66,7 @@
     ui = auto
 [push]
     default = upstream
+[log]
+	date = relative
+[rerere]
+	enabled = true
