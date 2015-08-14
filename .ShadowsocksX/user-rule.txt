@@ -1,0 +1,33 @@
+! Put user rules line by line in this file.
+! See https://adblockplus.org/en/filter-cheatsheet
+
+
+tumblr.com
+wikipedia.org
+imgur.com
+tineye.com
+jsbin.com
+pixiv.net
+github.io
+github.com
+google.com
+feedly.com
+vultr.com
+babeljs.io
+
+
+amazonaws.com
+dropboxstatic.com
+steamstatic.com
+sstatic.net
+cloudfront.net
+fastly.net
+akamaihd.net
+mailchimp.com
+
+msecnd.net
+kotaku.com
+kinja-img.com
+vox-cdn.com
+
+yao.cl

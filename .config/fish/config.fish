@@ -1,8 +1,9 @@
 # fish_user_paths does not override path in current version
 # it will be fixed in next release
 # @see https://github.com/fish-shell/fish-shell/issues/1099
-set PATH ~/.config/scripts /usr/local/bin /usr/local/sbin /usr/local/var/rbenv/shims /usr/local/var/python/bin /usr/bin /bin /usr/sbin /sbin ~/Downloads/flex_sdk_4.6/bin
+set PATH ~/.config/scripts /usr/local/bin /usr/local/sbin /usr/local/var/rbenv/shims /usr/local/var/ruby/bin /usr/local/var/python/bin /usr/bin /bin /usr/sbin /sbin
 
+set HOMEBREW_GITHUB_API_TOKEN bffad299f5f61ba7f8ea9aec2ca4d5b1408535ee
 
 # improve speed by cache confiuration
 # reload by `set -eU FISHING`
@@ -36,12 +37,12 @@ set -Ux NODE_PATH $npm/lib/node_modules
 
 
 
-# # ruby/gem
-# ## ruby_gems
-# ## shared gems install path
-# set -Ux GEM_HOME /usr/local/var/ruby
-# set -Ux GEM_PATH $GEM_HOME
-# set p $p $GEM_PATH/bin
+# local ruby/gem
+## ruby_gems
+## shared gems install path
+set -Ux GEM_HOME /usr/local/var/ruby
+set -Ux GEM_PATH $GEM_HOME
+set p $p $GEM_PATH/bin
 
 ## rbenv
 set -Ux RBENV_ROOT /usr/local/var/rbenv

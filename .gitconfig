@@ -57,16 +57,20 @@
     sf = svn fetch
 
     # set email & username for company
-    config2 = "!f() { git config user.name '2'; git config user.email '2@me.com'; }; f"
+    config2 = "!f() { git config user.name '2'; git config user.email '2@f.com'; }; f"
+    config-ali = "!f() { git config user.name '幽零'; git config user.email 'xinbin.xb@alibaba-inc.com'; }; f"
+    config-netease = "!f() { git config user.name 'Bin Xin'; git config user.email 'xinbin@rd.netease.com'; }; f"
 [core]
     autocrlf = input
     editor = vim
-    excludesfile = ~/.config/gitignore_global
+    excludesfile = ~/.gitignore_global
 [color]
     ui = auto
 [push]
     default = upstream
 [log]
-	date = relative
+    date = relative
 [rerere]
-	enabled = true
+    enabled = true
+[http "https://github.com"]
+    proxy = socks5://127.0.0.1:1080

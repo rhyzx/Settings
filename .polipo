@@ -1,0 +1,3 @@
+socksParentProxy = localhost:1080
+diskCacheRoot=""
+disableLocalInterface=true
