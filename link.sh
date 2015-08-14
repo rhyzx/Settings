@@ -5,6 +5,9 @@ DIR=$( cd "$( dirname "$0" )" && pwd )
 # ssh
 ln -s $DIR/.ssh ~/
 
+# bin
+ln -s $DIR/.bin ~/
+
 # git
 ln -s $DIR/.gitconfig ~/
 ln -s $DIR/.gitignore_global ~/
@@ -24,8 +27,6 @@ ln -s $DIR/.proxychains ~/
 mkdir -p ~/.ShadowsocksX
 ln -s $DIR/.ShadowsocksX/user-rule.txt ~/.ShadowsocksX/
 
-# TODO
-# ln -s $DIR/.bin ~/
 
 ####
 # ln -s $DIR/.vimrc ~/

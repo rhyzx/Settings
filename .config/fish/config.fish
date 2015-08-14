@@ -1,7 +1,7 @@
 # fish_user_paths does not override path in current version
 # it will be fixed in next release
 # @see https://github.com/fish-shell/fish-shell/issues/1099
-set PATH ~/.config/scripts /usr/local/bin /usr/local/sbin /usr/local/var/rbenv/shims /usr/local/var/ruby/bin /usr/local/var/python/bin /usr/bin /bin /usr/sbin /sbin
+set PATH ~/.bin /usr/local/bin /usr/local/sbin /usr/local/var/rbenv/shims /usr/local/var/ruby/bin /usr/local/var/python/bin /usr/bin /bin /usr/sbin /sbin
 
 set HOMEBREW_GITHUB_API_TOKEN bffad299f5f61ba7f8ea9aec2ca4d5b1408535ee
 
