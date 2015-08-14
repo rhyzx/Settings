@@ -2,7 +2,8 @@
 
 My self using config/rc for vim/shell/etc…
 
-![screenshot](https://raw.github.com/rhyzx/.config/master/screenshots/git_state_display.png)
+![git_state_display](https://cloud.githubusercontent.com/assets/1676871/9267864/064cb824-4289-11e5-8148-68e4efba896a.png)
+
 
 ## Installation
 
