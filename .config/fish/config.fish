@@ -1,10 +1,3 @@
-# fish_user_paths does not override path in current version
-# it will be fixed in next release
-# @see https://github.com/fish-shell/fish-shell/issues/1099
-set PATH ~/.bin /usr/local/bin /usr/local/sbin /usr/local/var/rbenv/shims /usr/local/var/ruby/bin /usr/local/var/python/bin /usr/bin /bin /usr/sbin /sbin
-
-set HOMEBREW_GITHUB_API_TOKEN bffad299f5f61ba7f8ea9aec2ca4d5b1408535ee
-
 # improve speed by cache confiuration
 # reload by `set -eU FISHING`
 if not set -qU FISHING
@@ -14,18 +7,23 @@ set fish_greeting ""
 
 set -Ux EDITOR 'subl'
 
-set -l p ~/.config/scripts
 
 # TODO
 # check exists
 # python easy_insatll/pip install dir
 # gems/python to /lib?
 
+set -U fish_user_paths ''
+function add_path
+  set fish_user_paths $fish_user_paths $argv
+end
+
+add_path ~/.bin
 
 
 # brew (main)
 set -l brew (brew --prefix)
-set p $p $brew/bin $brew/sbin
+add_path $brew/bin $brew/sbin
 
 
 
@@ -42,11 +40,11 @@ set -Ux NODE_PATH $npm/lib/node_modules
 ## shared gems install path
 set -Ux GEM_HOME /usr/local/var/ruby
 set -Ux GEM_PATH $GEM_HOME
-set p $p $GEM_PATH/bin
+add_path $GEM_PATH/bin
 
-## rbenv
-set -Ux RBENV_ROOT /usr/local/var/rbenv
-set -l rbenv (rbenv root)
+# ## rbenv
+# set -Ux RBENV_ROOT /usr/local/var/rbenv
+# set -l rbenv (rbenv root)
 
 
 
@@ -61,7 +59,7 @@ set -l rbenv (rbenv root)
 # set -Ux PIP_TARGET $PYTHONPATH
 set -Ux PYTHONPATH $brew/var/python
 set -Ux PIP_DOWNLOAD_CACHE "/Library/Caches/pip"
-set p $p $PYTHONPATH/bin
+add_path $PYTHONPATH/bin
 
 
 # Perl5 lib for git svn
@@ -70,6 +68,7 @@ set -Ux PERL5LIB "/Applications/Xcode.app/Contents/Developer/Library/Perl/5.16/d
 
 
 # Docker
+# `docker-machine env default`
 set -Ux DOCKER_TLS_VERIFY "1";
 set -Ux DOCKER_HOST "tcp://192.168.99.100:2376";
 set -Ux DOCKER_CERT_PATH "/Users/rhyzx/.docker/machine/machines/default";
@@ -95,8 +94,5 @@ set -U ___fish_git_prompt_char_dirtystate '👾 '
 set -U ___fish_git_prompt_char_stashstate '🍳 '
 set -U ___fish_git_prompt_char_stagedstate '🌀 '
 
-
-# prepend to PATH
-set fish_user_paths $p
 end
 
