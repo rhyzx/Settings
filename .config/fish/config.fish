@@ -70,9 +70,10 @@ set -Ux PERL5LIB "/Applications/Xcode.app/Contents/Developer/Library/Perl/5.16/d
 
 
 # Docker
-set -Ux DOCKER_HOST tcp://192.168.59.103:2376
-set -Ux DOCKER_CERT_PATH ~/.boot2docker/certs/boot2docker-vm
-set -Ux DOCKER_TLS_VERIFY 1
+set -Ux DOCKER_TLS_VERIFY "1";
+set -Ux DOCKER_HOST "tcp://192.168.99.100:2376";
+set -Ux DOCKER_CERT_PATH "/Users/rhyzx/.docker/machine/machines/default";
+set -Ux DOCKER_MACHINE_NAME "default";
 
 
 # git
