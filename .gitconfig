@@ -1,12 +1,15 @@
 [user]
 	name = rhyzx
 	email= rhyzix@gmail.com
+[user "gitlab.corp.youdao.com"]
+	name = Bin Xin
+	email= xinbin@rd.netease.com
 [alias]
 	b  = branch -vv
 	bd = branch -d
 	ba = branch -a
 	br = branch -r
-	
+
 	c  = commit -am
 	cm = commit -m
 	ce = commit --amend
@@ -22,7 +25,7 @@
 	m  = merge --no-ff
 
 	p  = push
-	pu = push -u
+	pu = push -u origin HEAD
 	pr = pull --rebase
 	pp = !git pull --rebase && git push
 
@@ -56,10 +59,17 @@
 	sr = svn rebase
 	sf = svn fetch
 
-	# set email & username for company
-	config2 = "!f() { git config user.name '2'; git config user.email '2@f.com'; }; f"
-	config-ali = "!f() { git config user.name '幽零'; git config user.email 'xinbin.xb@alibaba-inc.com'; }; f"
-	config-netease = "!f() { git config user.name 'Bin Xin'; git config user.email 'xinbin@rd.netease.com'; }; f"
+
+	# auto setting email/username base on url
+	# BUG s/$var/xx/ $var need be escape
+	cfg = "!domain=$(git remote -v | head -1 | sed 's/^.*@\\(.*\\):.*$/\\1/; s/^.*:\\/\\/\\([^\\/]*\\).*$/\\1/')\
+		&& git config --get-regexp "^user\\.$domain" | sed \"s/user\\.$domain/user/; s/ \\(.*\\)\\$/ '\\1'/\" | xargs -L1 git config\
+		&& false"
+	cl = "!git clone $@\
+		&& cd $(basename $@ | sed -e 's/\\.git$//')\
+		&& git cfg\
+		&& cd -\
+		&& false"
 [core]
 	autocrlf = input
 	editor = vim
