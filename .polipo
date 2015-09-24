@@ -1,3 +1,5 @@
 socksParentProxy = localhost:1080
 diskCacheRoot=""
 disableLocalInterface=true
+proxyAddress=0.0.0.0
+# proxyPort=1081

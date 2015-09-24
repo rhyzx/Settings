@@ -10,11 +10,27 @@ jsbin.com
 pixiv.net
 github.io
 github.com
+githubusercontent.com
 google.com
 feedly.com
 vultr.com
 babeljs.io
-
+nodejs.org
+iojs.org
+docker.com
+reddit.com
+redditstatic.com
+gmail.com
+wikidevi.com
+ycombinator.com
+digitalocean.com
+amazon.com
+ssl-images-amazon.com
+ds4windows.com
+mozilla.net
+soundcloud.com
+quora.com
+mit.edu
 
 amazonaws.com
 dropboxstatic.com
@@ -24,6 +40,11 @@ cloudfront.net
 fastly.net
 akamaihd.net
 mailchimp.com
+wistia.com
+cloudflare.com
+rawgit.com
+vimeocdn.com
+redditmedia.com
 
 msecnd.net
 kotaku.com

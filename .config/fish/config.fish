@@ -38,9 +38,9 @@ set -Ux NODE_PATH $npm/lib/node_modules
 # local ruby/gem
 ## ruby_gems
 ## shared gems install path
-set -Ux GEM_HOME /usr/local/var/ruby
-set -Ux GEM_PATH $GEM_HOME
-add_path $GEM_PATH/bin
+set -Ux GEM_HOME /usr/local/lib/ruby/gems/system # main gems
+# set -Ux GEM_PATH $GEM_HOME # gem paths
+add_path $GEM_HOME/bin
 
 # ## rbenv
 # set -Ux RBENV_ROOT /usr/local/var/rbenv
