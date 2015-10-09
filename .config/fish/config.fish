@@ -63,8 +63,8 @@ add_path $PYTHONPATH/bin
 
 
 # Perl5 lib for git svn
-set -Ux PERL5LIB "/Applications/Xcode.app/Contents/Developer/Library/Perl/5.16/darwin-thread-multi-2level"
-# set -Ux PERL5LIB "/Library/Developer/CommandLineTools/Library/Perl/5.18/darwin-thread-multi-2level/"
+set -l cmdTools (xcode-select -p)
+set -Ux PERL5LIB "$cmdTools/Library/Perl/5.18/darwin-thread-multi-2level/"
 
 
 # Docker
