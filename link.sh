@@ -31,3 +31,8 @@ ln -s $DIR/.ShadowsocksX/user-rule.txt ~/.ShadowsocksX/
 ####
 # ln -s $DIR/.vimrc ~/
 # ln -s $DIR/.bash_profile ~/
+
+## TODO unlink
+# if [ -L /home/nit/a.c ] ; then
+#     echo "a.c is a symbolic link"
+# fi
