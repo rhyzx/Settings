@@ -25,7 +25,7 @@
 	m  = merge --no-ff
 
 	p  = push
-	pu = push -u origin HEAD
+	pu = !git push -u ${1-origin} HEAD && false
 	pr = pull --rebase
 	pp = !git pull --rebase && git push
 
@@ -34,8 +34,8 @@
 	sp = stash pop
 	# sc = stash clear # too danger
 	sa = stash apply
-	ss = "!f() { git stash show stash@{${1-0}}; }; f"
-	sss= "!f() { git stash show stash@{${1-0}} -p; }; f"
+	ss = !git stash show stash@{${1-0}} && false
+	sss= !git stash show stash@{${1-0}} -p && false
 
 	r  = reset
 	rh = reset --hard
@@ -53,15 +53,15 @@
 	cp = cherry-pick
 	root = rev-parse --show-toplevel
 
-
 	# git svn
 	sd = svn dcommit
 	sr = svn rebase
 	sf = svn fetch
 
-
 	# auto setting email/username base on url
-	# BUG s/$var/xx/ $var need be escape
+	# BUGs
+	# - only `.git` url is supported
+	# - s/$var/xx/ $var need be escape
 	cfg = "!domain=$(git remote -v | head -1 | sed 's/^.*@\\(.*\\):.*$/\\1/; s/^.*:\\/\\/\\([^\\/]*\\).*$/\\1/')\
 		&& git config --get-regexp "^user\\.$domain" | sed \"s/user\\.$domain/user/; s/ \\(.*\\)\\$/ '\\1'/\" | xargs -L1 git config\
 		&& false"
