@@ -31,6 +31,8 @@ mozilla.net
 soundcloud.com
 quora.com
 mit.edu
+pujia8.com
+nocookie.net
 
 amazonaws.com
 dropboxstatic.com
